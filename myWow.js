@@ -33,7 +33,5 @@ export default class MyWowComponent{
 			}
 		});
 	}
-
-
 }
 
