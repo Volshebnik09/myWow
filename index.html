@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script type="module" >
+		import MyWowComponent from './myWow.js';
+
+		const block5 = new MyWowComponent('#block5');
+
+		block5.riseRight('1s')
+	</script>
+
+	<div id="block1"></div>
+	<div id="block3">
+		<div id="block4"></div>
+		<div id="block5"></div>
+	</div>
+
+<style>
+	*{
+		margin: 0;
+		box-sizing: border-box;
+		padding: 0;
+	}	
+	#block1{
+		height: 600px;
+		background: gray;
+	}
+	#block3{
+		height: 400px;
+		background: gray;
+	}
+	#block4{
+		height: 100px;
+		background: blue;
+	}
+	#block5{
+		height: 100px;
+		background: yellow;
+	}
+</style>
+
+</html>

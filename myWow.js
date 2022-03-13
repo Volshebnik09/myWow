@@ -1,12 +1,12 @@
 /**
- *  подключаем в html <script defer src="myWow.js"></script>
- *  создаем переменную, например let block1 = new myWowComponent('#block1');
+ *  подключаем import myWowComponent from './myWow.js';
+ *  создаем переменную, например let block1 = new MyWowComponent('#block1');
  *  где '#block1' - написан по селектору querySelector
  *  устанавливаем анимацию и её скорость
  *  block1.riseLeft('1s'); или block1.riseRight('1s');
  *  скорость ставиться по примеру 0.1s; 1s; 2s и т.п.
  */
-class myWowComponent{
+export default class MyWowComponent{
 	Block;
 	constructor(location) {
 		this.Block = document.querySelector(location);
@@ -19,6 +19,7 @@ class myWowComponent{
 		this.rise(animDuration,'translate(120%)')
 	}
 	rise(animDuration,turn){
+		alert('123');
 		let transform;
 		transform = this.Block.style.transform;
 		this.Block.style.transform = `${turn}`;
