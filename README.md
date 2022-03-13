@@ -9,9 +9,9 @@
 type="module" - обязателен!!!
 ``` html
 <script type="module" >
-		import MyWowComponent from './myWow.js';
-		const block5 = new MyWowComponent('#block5');
-		block5.riseRight('1s')
-	</script>
+	import MyWowComponent from './myWow.js';
+	const block5 = new MyWowComponent('#block5');
+	block5.riseRight('1s')
+</script>
 ```
 
