@@ -19,7 +19,6 @@ export default class MyWowComponent{
 		this.rise(animDuration,'translate(120%)')
 	}
 	rise(animDuration,turn){
-		alert('123');
 		let transform;
 		transform = this.Block.style.transform;
 		this.Block.style.transform = `${turn}`;
