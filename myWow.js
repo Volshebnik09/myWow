@@ -12,22 +12,23 @@ export default class MyWowComponent{
 		this.Block = document.querySelector(location);
 	}
 
-	riseLeft(animDuration){
-		this.rise(animDuration,'translate(-120%)')
+	riseLeft(animDuration,withOpacity,Height){
+		this.rise(animDuration,'translate(-120%)',withOpacity, Height)
 	}
-	riseRight(animDuration){
-		this.rise(animDuration,'translate(120%)')
+	riseRight(animDuration,withOpacity,Height){
+		this.rise(animDuration,'translate(120%)',withOpacity, Height)
 	}
-	rise(animDuration,turn){
+	rise(animDuration,turn, withOpacity = true,Height = 0.2){
 		let transform;
 		let opacity;
 		transform = this.Block.style.transform;
 		opacity = this.Block.style.opacity;
+		if (withOpacity)
 		this.Block.style.opacity = '0';
 		this.Block.style.transform = `${turn}`;
 		window.addEventListener('scroll',() => {
 			// console.log(this.Block.getBoundingClientRect().y + this.Block.getBoundingClientRect().height - window.innerHeight)
-			if (this.Block.getBoundingClientRect().y - window.innerHeight + this.Block.getBoundingClientRect().height* 0.2 < 0) {
+			if (this.Block.getBoundingClientRect().y - window.innerHeight + this.Block.getBoundingClientRect().height* Height < 0) {
 				setTimeout(() => {
 					this.Block.style.opacity = opacity;
 					this.Block.style.transition = `${animDuration}`
@@ -37,4 +38,3 @@ export default class MyWowComponent{
 		});
 	}
 }
-
