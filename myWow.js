@@ -28,7 +28,7 @@ export default class MyWowComponent{
 		this.Block.style.transform = `${turn}`;
 		window.addEventListener('scroll',() => {
 			// console.log(this.Block.getBoundingClientRect().y + this.Block.getBoundingClientRect().height - window.innerHeight)
-			if (this.Block.getBoundingClientRect().y - window.innerHeight + window.innerHeight * Height < 0) {
+			if (this.Block.getBoundingClientRect().y - window.innerHeight + this.Block.getBoundingClientRect().height * Height < 0) {
 				setTimeout(() => {
 					this.Block.style.opacity = opacity;
 					this.Block.style.transition = `${animDuration}`
